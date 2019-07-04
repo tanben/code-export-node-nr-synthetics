@@ -1,0 +1,19 @@
+web-ext-artifacts
+node_modules
+_MACOSX/
+.DS_Store
+build
+.idea
+.tern-port
+selenium-ide.pem
+selenium-ide.crx
+.web-extension-id
+*.log
+*.swp
+*.iml
+*.tgz
+*.zip
+
+# auto-generated docs
+docs/api/arguments.md
+docs/api/commands.md
