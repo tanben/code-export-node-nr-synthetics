@@ -1,7 +1,7 @@
 # code-export-node-nr-synthetics
 New Relic Synthetics language library  for Selenium IDE
 
-This library implements the Selenium IDE [code export framework](https://www.seleniumhq.org/selenium-ide/docs/en/plugins/code-export/)
+This library implements the Selenium IDE [code export framework](https://www.seleniumhq.org/selenium-ide/docs/en/plugins/code-export/) see details [here](https://github.com/SeleniumHQ/selenium-ide/blob/v3/docs/introduction/code-export.md)
 
 
 ### Usage
