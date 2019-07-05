@@ -25,7 +25,8 @@ const  codeExport = require('code-export-node-nr-synthetics')
 
 ```
 
-see sample usage [here](https://github.com/tanben/syntheticsformatter-for-seleniumide/blob/master/src/background/index.js)
+See sample usage in [New Relic Synthetics formatter for Selenium IDE](https://github.com/tanben/nrsynthetics-for-seleniumide/blob/master/src/background/index.js)
+
 
 
 
