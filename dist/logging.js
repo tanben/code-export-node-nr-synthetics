@@ -34,7 +34,7 @@ exports.default = void 0;
  * @constructor
  */
 const Logger = function ({
-  timeout = 3000,
+  timeout = 180000,
   stepLogging = false,
   insightsKey = ''
 }) {
@@ -108,7 +108,6 @@ const Logger = function ({
     console.log(`Step ${prevStep}: ${prevMsg} FINISHED. It took ${prevStepTimeElapsed}ms to complete. testCase=${testCase}`); // use Step log msgs as attributes in Insights
 
     if (stepLogging && insightsKey.length > 0) {
-      // $util.insights.set(`Step ${prevStep}: ${prevMsg}`, prevStepTimeElapsed)
       postInsights({
         step: prevStep,
         msg: prevMsg,
@@ -117,6 +116,8 @@ const Logger = function ({
           testCase
         }
       });
+    } else if (stepLogging) {
+      $util.insights.set(`Step ${prevStep}: ${prevMsg}`, prevStepTimeElapsed);
     }
 
     if (timeout > 0 && totalTimeElapsed > timeout) {
@@ -130,7 +131,6 @@ const Logger = function ({
     console.log(`Step ${prevStep}: ${prevMsg} FINISHED. It took ${prevStepTimeElapsed}ms to complete.`); // use Step log msgs as attributes in Insights
 
     if (stepLogging && insightsKey.length > 0) {
-      // $util.insights.set(`Step ${prevStep}: ${prevMsg}`, prevStepTimeElapsed)
       postInsights({
         step: prevStep,
         msg: prevMsg,
@@ -139,6 +139,8 @@ const Logger = function ({
           testCase
         }
       });
+    } else if (stepLogging) {
+      $util.insights.set(`Step ${prevStep}: ${prevMsg}`, prevStepTimeElapsed);
     }
 
     $util.insights.set('testCase', testCase);

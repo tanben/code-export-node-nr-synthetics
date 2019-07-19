@@ -28,7 +28,7 @@
  * @returns {{endTestCase: endTestCase, postInsights: postInsights, log: log, getStep: (function(): number), end: end, error: error, logStep: logStep}}
  * @constructor
  */
-const Logger = function( {timeout = 3000,  stepLogging=false, insightsKey=''}) {
+const Logger = function( {timeout = 180000,  stepLogging=false, insightsKey=''}) {
   const startTime = Date.now()
 
 
@@ -99,8 +99,10 @@ const Logger = function( {timeout = 3000,  stepLogging=false, insightsKey=''}) {
 
     // use Step log msgs as attributes in Insights
     if (stepLogging && insightsKey.length >0 ) {
-      // $util.insights.set(`Step ${prevStep}: ${prevMsg}`, prevStepTimeElapsed)
       postInsights({step:prevStep, msg:prevMsg, duration: prevStepTimeElapsed, custom:{testCase}})
+    }
+    else if (stepLogging) {
+      $util.insights.set(`Step ${prevStep}: ${prevMsg}`, prevStepTimeElapsed)
     }
 
 
@@ -123,8 +125,10 @@ const Logger = function( {timeout = 3000,  stepLogging=false, insightsKey=''}) {
 
     // use Step log msgs as attributes in Insights
     if (stepLogging && insightsKey.length >0 ) {
-      // $util.insights.set(`Step ${prevStep}: ${prevMsg}`, prevStepTimeElapsed)
       postInsights({step:prevStep, msg:prevMsg, duration: prevStepTimeElapsed, custom:{testCase}})
+    }
+    else if (stepLogging) {
+      $util.insights.set(`Step ${prevStep}: ${prevMsg}`, prevStepTimeElapsed)
     }
 
     $util.insights.set('testCase', testCase)
