@@ -19,7 +19,7 @@ var _synthetics = _interopRequireDefault(require("./synthetics"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+function _objectSpread2(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -70,7 +70,7 @@ async function emitTest({
   let tmpOpts = Object.assign({}, opts, {
     terminatingKeyword: `${tcFooter}})\n`
   });
-  var result = await _sideUtils.codeExport.emit.test(test, tests, _objectSpread({}, tmpOpts, {
+  var result = await _sideUtils.codeExport.emit.test(test, tests, _objectSpread2({}, tmpOpts, {
     testDeclaration,
     enableOriginTracing,
     project
@@ -87,7 +87,7 @@ async function emitTest({
     terminatingKeyword: ''
   });
 
-  const _suite = await _sideUtils.codeExport.emit.suite(result, tests, _objectSpread({}, tmpOpts, {
+  const _suite = await _sideUtils.codeExport.emit.suite(result, tests, _objectSpread2({}, tmpOpts, {
     suiteDeclaration,
     suiteName,
     project
@@ -136,7 +136,7 @@ async function emitSuite({
   });
   const suiteDeclaration = generateSuiteDeclaration(suite.name);
 
-  const _suite = await _sideUtils.codeExport.emit.suite(result, tests, _objectSpread({}, tmpOpts, {
+  const _suite = await _sideUtils.codeExport.emit.suite(result, tests, _objectSpread2({}, tmpOpts, {
     suiteDeclaration,
     suite,
     project

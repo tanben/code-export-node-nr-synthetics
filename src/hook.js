@@ -171,7 +171,7 @@ function declareVariables() {
 
         {
           level: 0,
-          statement: `const logger = ${logging.toString()}({timeout:180000, stepLogging:false, })`,
+          statement: `const logger = ${logging.toString()}({})`,
         },
 
         {

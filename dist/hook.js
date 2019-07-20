@@ -195,7 +195,7 @@ function declareVariables() {
         statement: 'var vars = new Map();'
       }, {
         level: 0,
-        statement: `const logger = ${_logging.default.toString()}({timeout:180000, stepLogging:false, })`
+        statement: `const logger = ${_logging.default.toString()}({})`
       }, {
         level: 0,
         statement: '$browser.getCapabilities().then(function () { })'
