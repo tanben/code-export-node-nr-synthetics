@@ -1,6 +1,6 @@
 {
   "name": "code-export-node-nr-synthetics",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "New Relic Synthetics language export for Selenium IDE",
   "repository": "https://github.com/tanben/code-export-node-nr-synthetics",
   "keywords": [

@@ -1314,6 +1314,5 @@ export default {
   canEmit,
   emit,
   register,
-  extras: { emitWaitForWindow },
 
 }

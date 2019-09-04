@@ -1157,9 +1157,6 @@ async function emitWaitForElementNotVisible(locator, timeout) {
 var _default = {
   canEmit,
   emit,
-  register,
-  extras: {
-    emitWaitForWindow
-  }
+  register
 };
 exports.default = _default;
