@@ -553,7 +553,7 @@ async function emitMouseDown(locator) {
 async function emitMouseMove(locator) {
   const locator1 = await _location.default.emit(locator);
   const locator1Msg = locator1.replace(/\'/g, "\\\'").replace(/\"/g, '\\\"');
-  let nrcommand = global.nrsynthetics.mouseDown.toString().replace(/__LOG_MSG__/g, `Mouse movde`).replace(/__LOCATOR__/g, locator1);
+  let nrcommand = global.nrsynthetics.mouseMove.toString().replace(/__LOG_MSG__/g, `Mouse move`).replace(/__LOCATOR__/g, locator1);
   const commands = [{
     level: 0,
     statement: `.then( ${nrcommand})`
