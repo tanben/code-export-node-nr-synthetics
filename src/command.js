@@ -556,8 +556,8 @@ async function emitMouseMove(locator) {
   const locator1= await location.emit(locator)
   const locator1Msg= locator1.replace(/\'/g, "\\\'").replace(/\"/g, '\\\"')
 
-  let nrcommand=global.nrsynthetics.mouseDown.toString()
-    .replace(/__LOG_MSG__/g, `Mouse movde`)
+  let nrcommand=global.nrsynthetics.mouseMove.toString()
+    .replace(/__LOG_MSG__/g, `Mouse move`)
     .replace(/__LOCATOR__/g, locator1)
     
 
