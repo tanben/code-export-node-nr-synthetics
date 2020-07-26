@@ -1,6 +1,6 @@
 {
   "name": "code-export-node-nr-synthetics",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "New Relic Synthetics language export for Selenium IDE",
   "repository": "https://github.com/tanben/code-export-node-nr-synthetics",
   "keywords": [
@@ -23,7 +23,7 @@
     "@babel/cli": "^7.4.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
-    "jest": "^24.3.1"
+    "jest": "^26.1.0"
   },
   "dependencies": {
     "@babel/core": "^7.3.4",
