@@ -1,17 +1,28 @@
 {
-  "name": "code-export-node-nr-synthetics",
-  "version": "1.0.6",
-  "description": "New Relic Synthetics language export for Selenium IDE",
-  "repository": "https://github.com/tanben/code-export-node-nr-synthetics",
+  "name": "@tanben/code-export-node-nr-synthetics",
+  "version": "1.0.7",
+  "description": "New Relic Synthetics formatter for Selenium IDE recorder",
+  "author": {
+    "name": "Benedicto Tan",
+    "email": "ben.tan.dev@gmail.com",
+    "url": "https://github.com/tanben"
+  },
+  "repository": "git://github.com/tanben/code-export-node-nr-synthetics.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "keywords": [
-    "selenium",
-    "ide",
-    "export"
+    "synthetics formatter",
+    "synthetics",
+    "selenium ide",
+    "new relic"
   ],
   "license": "Apache-2.0",
-  "private": true,
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
   "scripts": {
-    "build": "babel -d dist src --ignore=__test__",
+    "build": "babel -d dist src --ignore=__test__ ",
     "watch": "yarn build -w",
     "test": "jest"
   },

@@ -1,19 +1,18 @@
 # code-export-node-nr-synthetics
+[![NPM](https://img.shields.io/badge/dynamic/json?color=red&label=NPM&query=engines.npm&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftanben%2Fcode-export-node-nr-synthetics%2Fmaster%2Fpackage.json)]()
+[![Version](https://img.shields.io/badge/dynamic/json?color=blue&label=Version&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftanben%2Fcode-export-node-nr-synthetics%2Fmaster%2Fpackage.json)]()
+
 New Relic Synthetics language library  for Selenium IDE
+
 
 This library implements the Selenium IDE [code export framework](https://www.seleniumhq.org/selenium-ide/docs/en/plugins/code-export/) see details [here](https://github.com/SeleniumHQ/selenium-ide/blob/v3/docs/introduction/code-export.md)
 
-# Disclaimer
-New Relic has open-sourced this integration to enable monitoring of this technology. This integration is provided AS-IS WITHOUT WARRANTY OR SUPPORT, although you can report issues and contribute to this integration via GitHub.
 
-### Usage
+# Usage
 
 ```
 
-const  codeExport = require('code-export-node-nr-synthetics')
-
-...
-
+const  codeExport = require('@tanben/code-export-node-nr-synthetics')
 
 
   if (message.action === 'export') {
@@ -26,8 +25,6 @@ const  codeExport = require('code-export-node-nr-synthetics')
 
 
 ```
-
-See sample usage in [New Relic Synthetics formatter for Selenium IDE](https://github.com/tanben/nrsynthetics-for-seleniumide/blob/master/src/background/index.js)
 
 
 
